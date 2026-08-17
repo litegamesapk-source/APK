@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  direction: rtl;
+}
+
+body {
+  font-family: 'Tajawal', system-ui, sans-serif;
+  background-color: #f0fbff;
+  color: #0c4a6e;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #bae9fd;
+  border-radius: 3px;
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-beach-100 p-4;
+  }
+  .btn-primary {
+    @apply bg-beach-500 text-white font-bold py-3 px-6 rounded-xl shadow-md hover:bg-beach-600 active:scale-95 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-secondary {
+    @apply bg-white text-beach-700 font-bold py-3 px-6 rounded-xl border-2 border-beach-200 hover:bg-beach-50 active:scale-95 transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-beach-50 border-2 border-beach-100 rounded-xl px-4 py-3 text-beach-900 placeholder-beach-300 focus:outline-none focus:border-beach-400 transition-colors;
+  }
+  .page-container {
+    @apply max-w-lg mx-auto px-4 pb-28 pt-6 min-h-screen;
+  }
+  .section-title {
+    @apply text-lg font-bold text-beach-800 mb-3;
+  }
+}
